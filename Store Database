@@ -1,0 +1,48 @@
+
+--designing store database
+
+/** Dyane' place:
+Bikes (1)
+Jewlery (2)
+Drinks (3)
+Outdoor supplies (4)
+Kids clothes (5)
+Teens clothes (6)
+Swimwear (7)
+Baseball gear (8)
+Football gear (9)
+T.V (10)
+Game systems (11)
+Mens clothes (12)
+Womens clothes (13)
+Toys (14)
+School supplies (15)
+**/
+
+CREATE TABLE list (id INTEGER PRIMARY KEY, name TEXT, sold INTEGER, price INTEGER, inventory INTEGER);
+
+INSERT INTO list VALUES (1, "Bikes", 5, 200.00,12);
+INSERT INTO list VALUES (2, "Jewlery",20,1000,2);
+INSERT INTO list VALUES (3, "Drinks",100,10.00,3);
+INSERT INTO list VALUES (4, "Outdoor supplies",20,50.00,7);
+INSERT INTO list VALUES (5, "Kids clothes",20,60.00,8);
+INSERT INTO list VALUES (6, "Teens clothes",100,100.00,11);
+INSERT INTO list VALUES (7, "Swimwear",30,100.00,1);
+INSERT INTO list VALUES (8, "Baseball gear",40,25,100);
+INSERT INTO list VALUES (9, "Football gear",30,15.00,12);
+INSERT INTO list VALUES (10, "T.V",5,500.00,12);
+INSERT INTO list VALUES (11, "Game system",10,300.00,1);
+INSERT INTO list VALUES (12, "Men's clothes",100,50.00,12);
+INSERT INTO list VALUES (13, "Women's clothes",12,100.00,10);
+INSERT INTO list VALUES (14, "Toys",100,10,12);
+INSERT  INTO list VALUES (15, "School supplies",13,5.00,25);
+
+--display all items from the list
+SELECT * FROM list;
+
+--display items by price and ORDER BY sold datebase
+SELECT price FROM list;
+SELECT * FROM list ORDER BY sold;
+
+--display  SUM price of entire store database
+SELECT SUM(price) FROM list
